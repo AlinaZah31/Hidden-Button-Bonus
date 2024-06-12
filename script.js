@@ -6,7 +6,7 @@ function generateButtons() {
         button.type = "button";
         button.innerText = i;
         button.id = i;
-        button.onclick= function displayMessage() {
+        button.onclick = function displayMessage() {
             if (i === randomBtn) {
                 document.getElementById("Initial-text").innerHTML = "You win!";
             } else {
