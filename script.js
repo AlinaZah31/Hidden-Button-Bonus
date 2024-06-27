@@ -6,13 +6,15 @@ function generateButtons() {
         button.type = "button";
         button.innerText = i;
         button.id = i;
-        button.onclick = function displayMessage() {
-            if (i === randomBtn) {
-                document.getElementById("Initial-text").innerHTML = "You win!";
-            } else {
-                document.getElementById("Initial-text").innerHTML = "You lose!";
-            }
-        };
         document.body.appendChild(button);
-    }   
+        document.getElementById(button.id).onclick=function() {displayMessage(i, randomBtn)};
+    } 
 }
+
+function displayMessage(buttonNo, randomNo) {
+    if (buttonNo === randomNo) {
+        document.getElementById("Initial-text").innerHTML = "You win!";
+    } else {
+         document.getElementById("Initial-text").innerHTML = "You lose!";
+    }
+} 
