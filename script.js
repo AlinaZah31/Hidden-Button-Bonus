@@ -1,13 +1,13 @@
 function generateButtons() {
-    const genButtons = noButtons.value;
-    const randomBtn = Math.floor(Math.random() * genButtons) + 1;
+    const genButtons=noButtons.value;
+    const randomBtn=Math.floor(Math.random() * genButtons) + 1;
     for (let i = 1; i <= genButtons; ++i) {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.innerText = i;
-        button.id = i;
+        const button=document.createElement("button");
+        button.type="button";
+        button.innerText=i;
+        button.id=i;
         document.body.appendChild(button);
-        document.getElementById(button.id).onclick=function() {displayMessage(i, randomBtn)};
+        button.onclick=function() {displayMessage(i, randomBtn)};
     } 
 }
 
